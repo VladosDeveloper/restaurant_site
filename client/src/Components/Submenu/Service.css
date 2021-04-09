@@ -1,0 +1,183 @@
+.service-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 400ms ease;
+}
+
+.service-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.first-section,
+.second-section {
+  width: 50%;
+  height: 100%;
+}
+
+.second-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.second-section h4 {
+  width: 80%;
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+  padding: 0 0.6rem 0.6rem 0.6rem;
+  margin-top: 2.5rem;
+}
+
+.service-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 30px;
+}
+
+.first-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  background: #000000;
+  color: #fff;
+  padding: 20px;
+}
+
+.service {
+  position: fixed;
+  top: -100%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50vh;
+  /*padding: 30px;*/
+  background: #ffffff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  z-index: 999999;
+  right: 0;
+  transition: 300ms ease-in;
+  animation: simpleAnimationIm 300ms ease forwards;
+  animation-delay: 300ms;
+}
+
+.service-form select {
+  border: none;
+  width: 100%;
+  background: #ffff;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  outline: none;
+  padding: 5px 10px;
+  margin-bottom: 1rem;
+}
+
+.service-form ~ .select-people {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-form .select-people label {
+  font-size: 1rem;
+}
+
+.service-form .select-people input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  padding: 5px 10px;
+}
+
+.service-text {
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  margin-top: 1rem;
+}
+
+.service-text span {
+  font-size: 1rem;
+}
+
+@keyframes simpleAnimationIm {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes simpleAnimationOut {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .service {
+    width: 100%;
+    height: 100vh;
+    transform: translate(0%, -50%);
+  }
+  .service-form {
+    width: 100%;
+  }
+  .select-people {
+    width: 100%;
+  }
+  .service-body {
+    flex-direction: column-reverse;
+  }
+  .first-section,
+  .second-section {
+    width: 100%;
+    height: 100%;
+  }
+  .service-form {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-background {
+    overflow: hidden;
+  }
+  .service {
+    width: 90%;
+    height: 95vh;
+    top: 50%;
+    transform: translate(-5%, -50%);
+  }
+  .first-section,
+  .second-section {
+    width: 100%;
+    height: 50%;
+  }
+  .service-form {
+    padding: 15px;
+  }
+  .service-form select option {
+    font-size: 1rem;
+    width: 300px;
+  }
+  .service-text span {
+    font-size: 0.8rem;
+  }
+}

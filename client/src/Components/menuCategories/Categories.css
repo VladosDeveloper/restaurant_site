@@ -1,0 +1,28 @@
+.btn-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.filter-btn {
+  padding: 6px 15px;
+  border: 2px solid orange;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  transition: all 200ms ease-in;
+  outline: orange;
+  margin: 0.5rem 0;
+}
+
+.filter-btn:hover {
+  background: orange;
+}
+
+.filter-btn:not(:last-child) {
+  margin-right: 10px;
+}
